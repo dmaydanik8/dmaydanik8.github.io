@@ -5,166 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loading Screen for DGP Sandbox</title>
-    <!-- import fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <!-- import styles -->
-    <link rel="stylesheet" href="/styles/global.css">
-    <link rel="stylesheet" href="/styles/nicloud/loading_screen.css" await>
 </head>
 <style>
-@keyframes screenturn {
-    from {
-        transform: scale(1) rotate(0deg);
+    video {
+        object-fit: cover;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
     }
-    to {
-        transform: scale(1.2) rotate(5deg);
+
+    .title {
+        text-align: center;
+        color: white;
+        font-size: 60px;
+        font-family: 'Coolvetica';
+        src: url('https://codebrauer.github.io/gmod-loadingscreen/assets/fonts/CoolveticaRg-Regular.eot');
+        src: url('https://codebrauer.github.io/gmod-loadingscreen/assets/fonts/CoolveticaRg-Regular.eot?#iefix') format('embedded-opentype'), url('https://codebrauer.github.io/gmod-loadingscreen/assets/fonts/CoolveticaRg-Regular.woff') format('woff'), url('https://codebrauer.github.io/gmod-loadingscreen/assets/fonts/CoolveticaRg-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
     }
-}
 
-#screenbg {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    max-height: 100%;
-    
-    z-index: -1;
-    animation-name: screenturn;
-    animation-duration: 30s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
+    .viewport-header {
+        position: relative;
+        height: 100vh;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.stats {
-    padding: 15px;
-	text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    backdrop-filter: blur(8px);
-	font-family: "Space Grotesk",-apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-}
-
-.rules {
-    padding: 1em;
-    margin: 1em;
-    width: 23rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    backdrop-filter: blur(8px);
-}
-
-.bottom {
-    padding: 15px;
-	text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-	font-size: 60px;
-	font-weight: 700;
-    backdrop-filter: blur(8px);
-	font-family: "Space Grotesk",-apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-}
  </style>
 <body>
-    <div id="content">
-        <img id="screenbg" src="" alt="background">
-		<div class="bottom">
-            <div class="title">Ви заходите на DGP Sandbox</div>
-        </div>
-        <div class="stats">
-            <span id="curmap"><b>Поточна мапа: 🤔</b></span>
-			<b>ㅤㅤРандомне правило:</b>
-            <span id="random_rule">якесь рандомне правило</span>
-			<b>ㅤㅤНезнання правил не звільняє вас від відповідальності</b>
-        </div>
+    <video src="../img/bg.mp4" autoplay loop playsinline muted></video>
+    <div class="viewport-header">
+        <div class="title">Ласкаво просимо на DGP Sandbox</div><br>
+        <div class="loader"></div>
     </div>
-    <script>
-        var screenshots = [
-            "https://cdn.discordapp.com/attachments/1129057509408260148/1129057509559259287/20230713114041_1.jpg",
-            "https://cdn.discordapp.com/attachments/1129057509408260148/1129070579958423672/20230713113746_1.jpg",
-            "https://cdn.discordapp.com/attachments/1128343285153407006/1128343285505732709/image.png",
-            "https://cdn.discordapp.com/attachments/1128343285153407006/1128345315834069043/image.png",
-            "https://cdn.discordapp.com/attachments/1126883307393667123/1126883307653709864/20230707173050_1.jpg",
-            "https://cdn.discordapp.com/attachments/1126511352404529212/1126513099873210428/image.png",
-            "https://cdn.discordapp.com/attachments/1126511352404529212/1126523910322671696/image.png",
-            "https://cdn.discordapp.com/attachments/1126511352404529212/1126525938755190854/image.png",
-            "https://cdn.discordapp.com/attachments/1126511352404529212/1126522432207982682/image.png",
-            "https://cdn.discordapp.com/attachments/1126511352404529212/1126522533135519804/20230706173702_1.jpg",
-            "https://cdn.discordapp.com/attachments/1123582013883031602/1123589272969154621/image.png",
-            "https://cdn.discordapp.com/attachments/1122947744873586958/1122947745347534889/image.png",
-            "https://cdn.discordapp.com/attachments/1097588967697809428/1097588967882362990/image.png",
-            "https://cdn.discordapp.com/attachments/1097588967697809428/1097588968180174928/image.png",
-            "https://cdn.discordapp.com/attachments/1112717689689997332/1112717691166404608/image.png",
-            "https://cdn.discordapp.com/attachments/1112448960028737576/1112448961647759491/image.png",
-            "https://cdn.discordapp.com/attachments/1112448960028737576/1112448961312198716/image.png",
-            "https://cdn.discordapp.com/attachments/1112448960028737576/1112448961026982018/image.png",
-            "https://cdn.discordapp.com/attachments/1112000426565439589/1112000427001643129/image.png",
-            "https://cdn.discordapp.com/attachments/1107633735375003721/1107633735727337542/1.png",
-            "https://cdn.discordapp.com/attachments/1090634232717656075/1090634233669754910/2.png",
-            "https://cdn.discordapp.com/attachments/1105929947006120067/1106910896724398080/image.png",
-            "https://cdn.discordapp.com/attachments/1113109206262886441/1113109206770384998/2023-05-30_171757.png",
-            "https://cdn.discordapp.com/attachments/1117478553798316253/1117478554402304062/image.png",
-            "https://cdn.discordapp.com/attachments/1110328545584091318/1110328648755576922/Screenshot_272.png",
-			"https://media.discordapp.net/attachments/996480094870700093/1046520739286753350/20221127221913_1.jpg",
-			"https://cdn.discordapp.com/attachments/1102579483833282560/1102579484739256392/image.png",
-			"https://cdn.discordapp.com/attachments/1111243582645481553/1111243582842621993/image.png",
-			"https://cdn.discordapp.com/attachments/1107062115912658974/1107062116210450502/Screenshot_312.png",
-			"https://cdn.discordapp.com/attachments/1097252749084729364/1097252749307039816/Screenshot_212.png",
-			"https://cdn.discordapp.com/attachments/1111015788481097859/1111015788711780483/Screenshot_325.png",
-			"https://cdn.discordapp.com/attachments/1117478553798316253/1117478554066755636/image.png",
-			"https://media.discordapp.net/attachments/1123582013883031602/1123582017175572491/image.png",
-			"https://cdn.discordapp.com/attachments/1123582013883031602/1123582018463207494/image.png",
-        ];
-
-        var rules = [
-            "1. Не можна ображати інших гравців та їхніх рідних ( Мут, Гаг та Джайл на 10 хвилин )",
-            "2. Не можна спамити пропами, ентіті, технікою та іншими речами ( Джайл на 15 хвилин )",
-            "3. Не можна проп-пушити та проп-кілити ( Вбивати за допомогою гравіті гана можна ) ( Джайл на 10 хвилин )",
-            "4. Не можна крашити сервер ( Бан назавжди )",
-            "5. Не можна розповсюджувати анти-українські та про-російські ідеї ( Бан назавжди )",
-            "6. Не можна заважати гравцям які знаходяться у білд моді навіть коли ви знаходитесь у білд моді ( Джайл на 10 хвилин / Якщо людина в пвп це спеціально робила та бачила, що гравець у білд моді )",
-            "7. Не можна заважати гравцям які знаходяться у пвп, якщо ви у білд моді ( Джайл на 10 хвилин )",
-            "8. На сервері заборонений 18+ контент ( Джайл на 10 хвилин ) ",
-            "9. Не можна виходити з гри, якщо ви знаходитесь у джайлі ( Бан на 5 годин )",
-            "10. Не можна накручувати здоров'я ( Джайл на 15 хвилин )",
-            "11. Не можна обманювати модерацію сервера ( Бан на 3 години )",
-            "12. Не можна рекламувати інші сервера ( Бан назавжди )",
-            "13. Не можна використовувати PAC3, Wiremod та E2 для того, щоб отримати перевагу над іншими гравцями ( Бан на 1 день )</br> PAC3 можна, але заборонено робити себе дуже великим або маленьким.</br> Wiremod можна, але заборонено робити такі речі, які можуть вбивати одразу, телепортувати вас до гравця та так далі.</br> E2 можна, але заборонено використовувати його для того, щоб отримати перевагу над іншими гравцями.",
-            "14. Не можна використовувати стороннє ПО (програмне забезпечення) - чіти та так далі ( Бан назавжди )",
-            "15. Не можна спавнити Health kit або Suit battery під час перестрілки з іншим гравцем.",
-            "16. Треба обов'язково ставити кейпад для входу на базу та виходу з неї ( Джайл на 10 хв )",
-            "17. Москаль = бан",
-			"18. Спроба крашу серверу ( Бан на 2 неділі )",
-			"19. Поважаєш совок, комуняка та так далі = Бан назавжди",
-			"20. Не можна спавн-кілити ( Джайл на 15 хвилин )",
-			"21. Не можна підвішувати більше 4 бомб з гредвітчу на літак, дрон та іншу техніку ( Джайл на 20 хвилин )",
-			"22. Не можна використовувати маленькі моделі гравця ( Джайл на 10 хвилин )",
-			"23. Не можна спавнити дублікати матеріалів, бомб та інших речей з Jmod'у ( Джайл на 20 хвилин )",
-			"24. Не можна спамити бомбами з Gredwitch'у ( Джайл на 20 хвилин )",
-			"25. Не можна бути у режимі керування пушки АСЕ та літати по мапі вбиваючі гравців ( Джайл на 20 хвилин )",
-			"26. Максимально до 210 міліметрів ( Джайл на 10 хвилин )",
-			"27. Заборонено підвішувать на дрони з вайру або на хелікоптери бомби до 250кг ( Джайл на 10 хвилин )"
-        ];
-
-        setInterval(setBackground, 30000);
-        function setBackground() {
-            var selected_screenshot = screenshots[Math.floor(Math.random() * screenshots.length)];
-            document.getElementById("screenbg").src = selected_screenshot;
-        }
-
-        setInterval(writeRandomRule, 15000);
-        function writeRandomRule() {
-            var selected_rule = rules[Math.floor(Math.random() * rules.length)];
-            document.getElementById("random_rule").innerHTML = selected_rule;
-        }
-        
-        function GameDetails( servername, serverurl, mapname, maxplayers, steamid, gamemode, volume, language ) {
-            document.getElementById("curmap").innerHTML = "Поточна мапа: " + mapname;
-        }
-        
-        setBackground();
-        writeRandomRule();
-    </script>
 </body>
 </html>
