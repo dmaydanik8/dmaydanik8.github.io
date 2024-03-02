@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script type="text/javascript">
+      document.write(
+        '<link rel="stylesheet" href="css/main.css?' + Math.random() + '">'
+      );
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed|Ubuntu+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="css/main.css" /> -->
+    <title>DGP Sandbox</title>
+    <style>
+    body {
+      background-image: url("https://cdn.discordapp.com/attachments/1122947744873586958/1122947745347534889/image.png?ex=65ef4515&is=65dcd015&hm=ae397da233a94bbeae98e17091e43212c2b0ce37bbf3a913ed6c7f6891d45676&");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+  </head>
+  <body>
+    <script>
+      function changeBg() {
+
+      const images = [
+          'url("https://cdn.discordapp.com/attachments/1176275962871169095/1176275963231862804/image.png?ex=65ef7a5b&is=65dd055b&hm=9b70471672b6c3220dbaeee4702fc61e9e94cca779495477d18d4ccb2e72d803&")',
+          'url("https://cdn.discordapp.com/attachments/1176275962871169095/1176275963651313765/image.png?ex=65ef7a5b&is=65dd055b&hm=389b9ddd20914bf87686d43abf18a22fa8bc36915e6757d0d49f5d313ecfaa5d&")',
+          'url("https://cdn.discordapp.com/attachments/1133695070349053994/1133695070768480336/image.png?ex=65f1744f&is=65deff4f&hm=02d1add17e4d9ab2a4fb4b6a1a60ca540d8423a9558f0c98340428617d2ae0a6&")',
+          'url("https://cdn.discordapp.com/attachments/1139261057362313248/1139261058171818066/image.png?ex=65f33f0a&is=65e0ca0a&hm=33f573a0a059fba0f6d8e0e4742905281b333b23391012a2c663013a66064e21&")',
+          'url("https://cdn.discordapp.com/attachments/1139261057362313248/1139264351287648437/image.png?ex=65f3421b&is=65e0cd1b&hm=cc1347015aa9acce6e173aa021c74e550f43cd1d2915bbd977280eacd34f39cd&")',
+          'url("https://cdn.discordapp.com/attachments/1141714949375270972/1141714949526261850/20230806185846_1.jpg?ex=65f2f1e8&is=65e07ce8&hm=87823e67d5c4b8042d644251de1393bd04fa2138f725a3fd5eec0b0087c0187f&")',
+          'url("https://cdn.discordapp.com/attachments/1141715047387775036/1141715048079831140/20230729222042_1.jpg?ex=65f2f1ff&is=65e07cff&hm=480b2e53a446e4a3821a88be3a77b938e284e4fe93707921d63097ccc4e6ac03&")',
+          'url("https://cdn.discordapp.com/attachments/1141715205575942174/1141715205735321780/20230728192143_1.jpg?ex=65f2f225&is=65e07d25&hm=67c954c35c007911132b27a7babd92220fc5327a0ac58fba7849c61c7cf3be53&")',
+          'url("https://cdn.discordapp.com/attachments/1129057509408260148/1129057509559259287/20230713114041_1.jpg?ex=65f30a3f&is=65e0953f&hm=a32707fc28db71866b5a6fd125665e4944f9c3d121c7b397117854643815da19&")',
+          'url("https://cdn.discordapp.com/attachments/1129057509408260148/1129070579958423672/20230713113746_1.jpg?ex=65f3166b&is=65e0a16b&hm=43c081dfc1f5fbc048191e5cc3814f66318f01821eecda71f9e0eb94eb17cf29&")',
+          'url("https://cdn.discordapp.com/attachments/1122947744873586958/1122947745347534889/image.png?ex=65ef4515&is=65dcd015&hm=ae397da233a94bbeae98e17091e43212c2b0ce37bbf3a913ed6c7f6891d45676&")',
+          'url("https://cdn.discordapp.com/attachments/1123582013883031602/1123589272969154621/image.png?ex=65f19a8d&is=65df258d&hm=4c54e12d80b07e896108c242c53ee5f49f03e59f88cfe0e70e7558bdfad7ca53&")',
+          'url("https://cdn.discordapp.com/attachments/792449803166285844/1213575677446717440/Screenshot_325.png?ex=65f5f96c&is=65e3846c&hm=c93ad033d761f5493c4f643d7255ae2bdb595cbebd57f78a05f215cf21da05f7&")',
+      ]
+
+      const body = document.querySelector('body')
+      const bg = images[Math.floor(Math.random() * images.length)];
+      body.style.backgroundImage = bg;
+    }
+
+      setInterval(changeBg, 5000)
+  </script>
+    <div class="overhaul"></div>
+
+    <nav>     
+      <span id="map">Мапа на сервері: </span>
+      <span id="steamid"></span>
+    </nav>
+
+    <main>
+      <div class="title">
+        <h2>Ласкаво просимо на</h2>
+        <h1 id="title"></h1>
+        <div id="history"></div>
+      </div>
+    </main>
+
+    <script src="js/lib/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+      document.write(
+        '<script src="js/config.js?' + Math.random() + '"><\/script>'
+      );
+      document.write(
+        '<script src="js/main.js?' + Math.random() + '"><\/script>'
+      );
+    </script>
+    <!-- <script src="config.js"></script> -->
+    <!-- <script src="js/main.js"></script> -->
+  </body>
+</html>
