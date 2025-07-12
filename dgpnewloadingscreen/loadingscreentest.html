@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading Screen for DGP Sandbox</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: black;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background-image: url("images/image5.png");
+      background-color: black;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: white;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .logo {
+      max-width: 90%;
+      width: 720px;
+      height: auto;
+      margin: 1rem 0;
+    }
+
+    .loader {
+      border: 4px solid #ffffff;
+      border-top: 4px solid #3498db;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      margin-top: 1rem;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .vignette {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 200px rgba(0, 0, 0, 0.9) inset;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .logo {
+        width: 90%;
+      }
+
+      .loader {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <!--- <h1>Ласкаво просимо!</h1> -->
+    <img src="biglogo2.png" alt="DGP Sandbox" class="logo">
+    <!--- <div class="loader"></div> -->
+    <div class="vignette"></div>
+  </section>
+
+  <script>
+    function changeBg() {
+      const images = [
+        'url("images/image1.png")',
+        'url("images/image2.png")',
+        'url("images/image3.png")',
+        'url("images/image4.png")',
+        'url("images/image5.png")',
+        'url("images/image6.png")',
+        'url("images/image7.png")',
+        'url("images/image8.png")',
+        'url("images/image9.png")',
+        'url("images/image10.png")',
+        'url("images/image11.png")',
+        'url("images/image12.png")',
+        'url("images/image13.png")',
+        'url("images/image14.png")',
+      ];
+
+      const section = document.querySelector('section');
+      const bg = images[Math.floor(Math.random() * images.length)];
+      section.style.backgroundImage = bg;
+    }
+
+    setInterval(changeBg, 5000);
+  </script>
+</body>
+</html>

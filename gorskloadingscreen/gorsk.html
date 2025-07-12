@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script type="text/javascript">
+      document.write(
+        '<link rel="stylesheet" href="css/main.css?' + Math.random() + '">'
+      );
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed|Ubuntu+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="css/main.css" /> -->
+    <title>Gorsk</title>
+    <style>
+    body {
+      background-image: url("https://steamuserimages-a.akamaihd.net/ugc/2477617641531676043/03250982C23D054098CC6F75072772BA10B5CDD1/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    @keyframes walk {
+	      0%
+	      {
+		      -webkit-transform: rotateZ(0deg);
+	      }
+
+	      50%
+	      {
+		      -webkit-transform: rotateZ(180deg);
+	      }
+
+	      100%
+	      {
+		      -webkit-transform: rotateZ(360deg);
+	      }
+    }
+    .walk {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+	    animation-name: walk;
+	    animation-duration: 10.0s;
+	    animation-iteration-count: infinite;
+	    animation-timing-function: linear;
+	    perspective: 6000px;
+	    text-align: center;
+	    background-color: #fe7;
+	    width: 24px;
+	    height: 24px;
+	    color: #999;
+	    font-size: 16px;
+	    font-family: arial;
+	    font-weight: bold;
+	    border-radius: 3px;
+	    display: inline-block;
+	    border: 2px solid #999;
+    }
+  </style>
+  </head>
+  <body>
+    <script>
+      function changeBg() {
+
+      const images = [
+          'url("images/1.png")',
+          'url("images/2.png")',
+          'url("images/3.png")',
+          'url("images/4.png")',
+          'url("images/5.png")',
+          'url("images/6.png")',
+          'url("images/7.jpg")',
+          'url("images/8.png")',
+          'url("images/9.jpg")',
+          'url("images/10.jpg")',
+          'url("images/11.jpg")',
+          'url("images/12.jpg")',
+          'url("images/13.jpg")',
+          'url("images/14.jpg")',
+          'url("images/15.jpg")',
+      ]
+
+      const body = document.querySelector('body')
+      const bg = images[Math.floor(Math.random() * images.length)];
+      body.style.backgroundImage = bg;
+    }
+
+      setInterval(changeBg, 5000)
+  </script>
+    <div class="overhaul"></div>
+
+    <nav>     
+      <span id="map">Мапа на сервері: </span>
+    </nav>
+
+    <main>
+      <div class="title">
+        <h2>Ласкаво просимо на</h2>
+        <h1 id="title"></h1>
+        <div id="history"></div>
+      </div>
+    </main>
+
+    <div class="walk">:v</div>
+
+    <script src="js/lib/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+      document.write(
+        '<script src="js/config.js?' + Math.random() + '"><\/script>'
+      );
+      document.write(
+        '<script src="js/main.js?' + Math.random() + '"><\/script>'
+      );
+    </script>
+    <!-- <script src="config.js"></script> -->
+    <!-- <script src="js/main.js"></script> -->
+  </body>
+</html>
