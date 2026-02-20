@@ -131,6 +131,18 @@
       </p>
     </div>
 
+    <div class="section">
+      <!-- Changed text-sky-400 to text-gray-100 -->
+      <h2 class="text-2xl md:text-3xl text-gray-100 mb-4 font-semibold flex items-center">
+        <span class="mr-3 text-3xl">📜</span>
+        <span data-key="addrules_header">Додаткові правила ACE</span>
+      </h2>
+      <textarea id="addrulesContent"
+                class="w-full h-64 bg-gray-700 text-gray-200 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 resize-none border border-gray-600"
+                readonly></textarea>
+      <!-- NOTE was here, now removed -->
+    </div>
+
   </div> <!-- End max-w-4xl container -->
 
   <script>
@@ -161,7 +173,7 @@
 
 ---------------------[Wiremod/E2/Starfall/ACE/PAC3]-----------------------------
 3.1. Усі Wiremod/E2/Starfall/ACE/PAC3 механізми, що використовуються в PvP, повинні мати логічну конструкцію та зберігати ігровий баланс.
-3.2. ACE-техніка повинна відповідати «Правилам побудови», закріпленим у відповідній гілці Discord.
+3.2. ACE-техніка повинна відповідати «Правилам побудови», закріпленим у відповідній гілці Discord або в блоці нижче.
 3.3. Заборонено використання автонаведення через Targetfinder, включаючи керовані ракети та автоматичні турелі (виключення можливі лише в разі дозволу адміністрації).
 3.4. Сучасна російська техніка (не радянська) не вітається на сервері. Використання певних зразків (Шахед/Герань, Ка-52, Т-14/15 тощо) суворо заборонено. Адміністрація залишає за собою право в індивідуальному порядку заборонити використання будь-якої іншої російської техніки.
 3.5. Заборонено використовувати Е2/Starfall/PAC3 що надають надмірну перевагу в пвп (включає але не обмежується: WH/ESP, телепортація об'єктів, тощо). Радари мають бути на екранах які можуть бачити інші гравці, HUD радари дозволені лише якщо вони орієнтуються за допомогою АСЕ.
@@ -178,6 +190,63 @@
         'addons_header': 'Колекція аддонів',
         'addons_text': 'Щоб все працювало коректно, підпишись на нашу Steam Workshop колекцію:',
         'addons_link_text': 'Steam Workshop Колекція',
+        'addrules_header': 'Додаткові правила ACE',
+        'addrules_content': "⨭АСЕ техніка має бути логічною, не можна ставити декілька ракетних установок на маленькій паличці, робити занадто швидку техніку (за допомогою Wiremod/E2/Starfall/тощо), нелогічну броню, розміщення екіпажу/двигуна/КП, ставити великі бомби на маленькому дроні. Намагайтеся орієнтуватися на реальну техніку. Можливі виключення (наприклад, для тестування).
+⨭Максимальний ліміт поїнтів для техніки окрім кораблів становить 10000 поїнтів(Можливі виключення для надважкої техніки, але на них накладаються інші моменти, питання їх балансування лягають на розсуд адміністрації)
+
+⨭Усі важливі компоненти мають бути всередині техніки. Сюди входять усі об’єкти Wiremod, пов’язані з введенням/виведенням і логікою, такі як контролери модулів і E2/Starfalls.
+
+⨭Техніка повинна мати фізичні пропи на місці P2M та/або Wire Holograms, техніка повинна мати адекватний хітбокс (відсутність хітбоксів на декораціях допускається).
+
+⨭Уникайте надмірного накладання ентіті АСЕ один на одного, будьте розумними (наприклад не перерізайте свого члена екіпажу бронею). 
+⨭Загальна скорострільність всього озброєння техніки не повинна перевищувати 1400 пострілів на хвилину (намагайтеся орієнтуватися на реальну скорострільність). Можливі виключення.
+
+⨭Камера має бути прикріплена до вашого транспорту. Не встановлюйте камери з висоти пташиного польоту або дуже високо над технікою. Для артилерії можна використовувати дрони для наведення, лазерні цілевказівники, перископи що можна зламати або інші способи наведення які не порушують вище згадані правила.
+
+⨭Заборонений ACE Refill у транспорті, заборонено ховати БК під землею, для стаціонарної техніки рефіл не повинен пришвидшувати перезарядку більше ніж на 50%.
+
+⨭Заборонений Prop APS в будь-якій формі.
+
+⨭Ручна зброя (зброя ACE, яка рухається разом з гравцем і стріляє з неї гравець) заборонена. 
+⨭Окремі обмеження для різних типів техніки:
+Гелікоптери - максимум 15 тонн. Жодна зона броні не може перевищувати 50 мм загальної ефективної броні.
+Літаки - максимум 20 тонн. Жодна зона броні не може перевищувати 30 мм загальної ефективної броні.
+Мехи - максимум 20 тонн. Стрибок обмежений половиною висоти меха.
+Ховертанки - максимум 30 тонн. Максимальна швидкість 50 км/год. Повинні бути з двигуном ACF. Не можуть літати вище 10 метрів.
+
+⨭Вага танку обмежена його висотою, висота танку вимірюється від днища танку до даху башти (не враховуючи декоративні елементи та дистанційно-керовані турелі).
+Висота 84+ - Без ліміту
+Висота 72+ - 55 Т
+Висота 60+ - 48 Т
+Висота 54+ - 38 Т
+Висота 48+ - 20 Т
+Менше 48 - 10 т
+
+⨭⨭Застосування Applyforce в транспортних засобах практично за жодних обставин заборонено:
+⨭Це включає, але не обмежується:
+Притискна сила.
+Допомога в управлінні або поворотах будь-якого виду.
+⨭Винятки:
+Водіння амфібією (амфібіями можуть бути лише легкі або дуже об'ємні транспортні засоби).
+Повітряні засоби категорії Е2.
+Звертайтеся до адміністрації для уточнення цього моменту.
+
+⨭Башта повинна мати маску гармати, як окремий елемент.
+⨭Башта що не має отвору в башті вважається дистанційно встановленою турелью.
+⨭Башта що не має екіпажу в башті (не рухаються разом з баштою) вважається безекіпажною.
+⨭Гармата яка має калібр 75мм та більш повинна бути біля навідника (перегородки дозволені) (для екіпажних башт) або мати прямий доступ до бк, без перегородок, з логічним шляхом снаряду (для безекіпажних башт). 
+Святий Бобо (Psēvđō) — 17:08
+⨭Максимальна швидкість повороту озброєння обмежений загальним калібром, чи є вона без екіпажною та чи є вона турелью. 
+⨭Швидкість визначається за формулою (y-швидкість у град/с, x-калібр озброєння)
+Стандартна башта y = 110 - 0.5x (-5 для без екіпажних башт)
+Дистанційна турель y = 180 - 3x (-45 для RAC (Rotary Autocannon))
+Незалежно від формули мінімально дозволеною швидкістю є 20 град/с (якщо не зазначено інше, наприклад, якщо техніка підпала під виключення)
+
+⨭Безпілотна техніка не повинна мати екіпаж.
+⨭Безпілотна техніка повинна мати розумний розмір для своєї ваги/броні
+⨭Безпілотна техніка не може використовувати бомби чи ракети вагою понад 200 кг.
+
+⨭Дрони повинні руйнуватись з вогнепальної зброї та мати звук.",
         'switch_to_lang': 'English'
       },
       'en': {
@@ -204,7 +273,7 @@
 2.10. It is forbidden to use PAC3/outfitter for big advantages in PvP.
 ---------------------[Wiremod/E2/Starfall/ACE/PAC3]-----------------------------
 3.1. All Wiremod/E2/Starfall/ACE/PAC3 mechanisms used in PvP must have a logical design and game balance.
-3.2. ACE-technique must comply with the "Building Rules" fixed in the corresponding Discord branch.
+3.2. ACE-technique must comply with the "Building Rules" fixed in the corresponding Discord branch or in the block below.
 3.3. It is forbidden to use auto-targeting via Targetfinder, including guided missiles and automatic turrets (disabling the capabilities only with the permission of the administrator).
 3.4. Modern Russian equipment (not Soviet) is not welcome on the server. The use of certain models (Shahed/Geran, Ka-52, T-14/15, etc.) is strictly prohibited. The administration reserves the right to individually prohibit the use of any other Russian equipment.
 3.5. It is forbidden to use E2/Starfall/PAC3, which gives a great advantage in pvp (including but not limited to: WH/ESP, teleportation of objects, etc.). There are radars on the screens that other players can see, HUD radars are allowed only if they are oriented using ASE.
@@ -221,6 +290,64 @@ If the moderator/administrator has committed more than 3 violations - removal fr
         'addons_header': 'Addons Collection',
         'addons_text': 'For everything to work correctly, subscribe to our Steam Workshop collection:',
         'addons_link_text': 'Steam Workshop Collection',
+        'addrules_header': 'Additional ACE rules',
+        'addrules_content': "⨭ACE vehicles must be logical, you can`t put several missile launchers on a small stick, make vehicles too fast (using Wiremod/E2/Starfall/etc.), illogical armor, crew/engine/control placement, put big bombs on a small drone. Try to focus on real vehicles. Exceptions are possible (for example, for testing).
+
+⨭The maximum point limit for vehicles other than ships is 10,000 points (Exceptions are possible for super-heavy vehicles, but they are subject to other factors, their balancing is at the discretion of the administration)
+
+⨭All important components must be inside the vehicle. This includes all Wiremod objects related to input/output and logic, such as module controllers and E2/Starfalls.
+
+⨭Vehicles must have physical props in place P2M and/or Wire Holograms, vehicles must have an adequate hitbox (no hitboxes on scenery are allowed).
+
+⨭Avoid excessive overlapping of ACE entities, be smart (e.g. don't cut your crew member with armor).
+⨭The total rate of fire of all weapons of the vehicle must not exceed 1400 rounds per minute (try to focus on the real rate of fire). Exceptions are possible.
+
+⨭The camera must be attached to your vehicle. Do not install cameras from a bird's eye view or very high above the vehicle. For artillery, you can use drones for guidance, laser designators, breakable periscopes or other guidance methods that do not violate the above rules.
+
+⨭ACE Refill prohibited in transport, it is forbidden to hide BC underground, for stationary vehicles, the refill must not speed up reloading by more than 50%.
+
+⨭Prop APS prohibited in any form.
+
+⨭Hand weapons (ACE weapons that move with the player and are fired by the player) are prohibited.
+⨭Separate restrictions for different types of vehicles:
+Helicopters - maximum 15 tons. No armor zone can exceed 50 mm of total effective armor.
+Aircraft - maximum 20 tons. No armor zone can exceed 30 mm of total effective armor.
+Mechs - maximum 20 tons. Jump is limited to half the height of the mech.
+Hovertanks - maximum 30 tons. Maximum speed 50 km/h. Must be with an ACF engine. Cannot fly higher than 10 meters.
+
+⨭The weight of the tank is limited by its height, the height of the tank is measured from the bottom of the tank to the roof of the turret (excluding decorative elements and remote-controlled turrets).
+Height 84+ - No limit
+Height 72+ - 55 T
+Height 60+ - 48 T
+Height 54+ - 38 T
+Height 48+ - 20 T
+Less than 48 - 10 t
+
+⨭⨭The use of Applyforce in vehicles is prohibited under almost all circumstances:
+⨭This includes, but is not limited to:
+Downforce.
+Steering or turning assistance of any kind.
+⨭Exceptions:
+Driving an amphibious vehicle (only light or very bulky vehicles can be amphibious).
+Category E2 aircraft.
+Contact the administration for clarification on this point.
+
+⨭The turret must have a gun mask, as a separate element.
+⨭A turret that does not have a hole in the turret is considered a remotely mounted turret.
+⨭A turret that does not have a crew in the turret (does not move with the turret) is considered unmanned.
+⨭A gun with a caliber of 75mm or more must be near the gunner (partitions are allowed) (for manned turrets) or have direct access to the bk, without partitions, with a logical projectile path (for unmanned turrets).
+Saint Bobo (Psēvđō) — 17:08
+⨭The maximum traverse speed of the weapon is limited by the overall caliber, whether it is unmanned and whether it is a turret.
+⨭Speed ​​is determined by the formula (y-speed in deg/s, x-caliber of the weapon)
+Standard turret y = 110 - 0.5x (-5 for unmanned turrets)
+Remote turret y = 180 - 3x (-45 for RAC (Rotary Autocannon))
+Regardless of the formula, the minimum allowed speed is 20 deg/s (unless otherwise stated, for example, if the vehicle is under an exclusion)
+
+⨭Unmanned vehicles must not have a crew.
+⨭Unmanned vehicles must be of reasonable size for their weight/armor
+⨭Unmanned vehicles cannot use bombs or missiles weighing more than 200 kg.
+
+⨭Drones must be destroyed by firearms and have sound.",
         'switch_to_lang': 'Українська'
       }
     };
@@ -255,6 +382,8 @@ If the moderator/administrator has committed more than 3 violations - removal fr
 
       // 2. Update the Rules Textarea content
       rulesContent.value = translations[lang]['rules_content'];
+
+      addrulesContent.value = translations[lang]['addrules_content'];
 
       // 3. Update the button text to show the language to switch TO
       const nextLang = lang === 'uk' ? 'en' : 'uk';
