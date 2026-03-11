@@ -178,7 +178,7 @@
 3.4. Сучасна російська техніка (не радянська) не вітається на сервері. Використання певних зразків (Шахед/Герань, Ка-52, Т-14/15 тощо) суворо заборонено. Адміністрація залишає за собою право в індивідуальному порядку заборонити використання будь-якої іншої російської техніки.
 3.5. Заборонено використовувати Е2/Starfall/PAC3 що надають надмірну перевагу в пвп (включає але не обмежується: WH/ESP, телепортація об'єктів, тощо). Радари мають бути на екранах які можуть бачити інші гравці, HUD радари дозволені лише якщо вони орієнтуються за допомогою АСЕ.
 3.6. Не стріляйте/не відстежуйте/не прицілюйтеся заздалегідь по супротивниках, якщо вони: перевернулися та намагаються перевернути свій транспортний засіб, щойно з'явилися/почали спавнити транспортний засіб, використовують літак і ще не злетіли в повітря.
-3.7. Не вставляйте вашу гармату у танк супротивника для обходу броні, оскільки танк не має колізії, таким чином можна обійти бронювання.
+3.7. Не вставляйте вашу гармату всередину інших транспортних засобів, щоб обійти їхню броню.
 
 ---------------------[Правила адміністрації]-----------------------------
 ВСІ види покарань тут виставляє адміністрація якими можуть бути як і джайл, так і зняття з ролі та перманентний бан
@@ -214,13 +214,14 @@
 Мехи - максимум 20 тонн. Стрибок обмежений половиною висоти меха.
 Ховертанки - максимум 30 тонн. Максимальна швидкість 50 км/год. Повинні бути з двигуном ACF. Не можуть літати вище 2 метрів.
 
-⨭Вага танку обмежена його висотою, висота танку вимірюється від днища танку до даху башти (не враховуючи декоративні елементи та дистанційно-керовані турелі).
-Висота 84+ - Без ліміту
-Висота 72+ - 55 Т
-Висота 60+ - 48 Т
-Висота 54+ - 38 Т
+⨭Максимальна маса танка залежить від його висоти (вимірюється від днища до даху башти). Декоративні елементи та дистанційні турелі не враховуються. У дужках показано обмеження для безекіпажних башт.
+Висота 84+ - Без ліміту (60т)
+Висота 72+ - 55 Т (50т)
+Висота 60+ - 48 Т (40т)
+Висота 54+ - 38 Т (30т)
 Висота 48+ - 20 Т
 Менше 48 - 10 т
+Для проміжних значень ліміт висоти маси також пропорційний (втім, якщо висота не перевищує 84, маса не може бути більше 60 т). За точним розрахунком звертайтеся до адміністрації.
 
 ⨭⨭Застосування Applyforce в транспортних засобах практично за жодних обставин заборонено:
 ⨭Це включає, але не обмежується:
@@ -234,11 +235,12 @@
 ⨭Башта повинна мати маску гармати, як окремий елемент.
 ⨭Башта що не має отвору в башті вважається дистанційно встановленою турелью.
 ⨭Башта що не має екіпажу в башті (не рухаються разом з баштою) вважається безекіпажною.
-⨭Гармата яка має калібр 75мм та більш повинна бути біля навідника (перегородки дозволені) (для екіпажних башт) або мати прямий доступ до бк, без перегородок, з логічним шляхом снаряду (для безекіпажних башт). 
+⨭Гармата яка має калібр 75мм та більш повинна бути біля навідника (перегородки дозволені) (для екіпажних башт) або мати прямий доступ до бк, без перегородок, з логічним шляхом снаряду (для безекіпажних башт).
+⨭Під час руху (горизонтального чи вертикального) ствол не повинен перетинатися з іншими об'єктами більше ніж на 50% своєї товщини. Це стосується як зовнішніх частин корпусу, так і внутрішніх елементів башти.
 
-⨭Максимальна швидкість повороту озброєння обмежений загальним калібром, чи є вона без екіпажною та чи є вона турелью. 
+⨭Максимальна швидкість повороту озброєння обмежений загальним калібром та чи є вона дистанційною турелью. 
 ⨭Швидкість визначається за формулою (y-швидкість у град/с, x-калібр озброєння)
-Стандартна башта y = 110 - 0.5x (-5 для без екіпажних башт)
+Стандартна башта y = 110 - 0.5x
 Дистанційна турель y = 180 - 3x (-45 для RAC (Rotary Autocannon))
 Незалежно від формули мінімально дозволеною швидкістю є 20 град/с (якщо не зазначено інше, наприклад, якщо техніка підпала під виключення)
 
@@ -278,7 +280,7 @@
 3.4. Modern Russian equipment (not Soviet) is not welcome on the server. The use of certain models (Shahed/Geran, Ka-52, T-14/15, etc.) is strictly prohibited. The administration reserves the right to individually prohibit the use of any other Russian equipment.
 3.5. It is forbidden to use E2/Starfall/PAC3, which gives a great advantage in pvp (including but not limited to: WH/ESP, teleportation of objects, etc.). There are radars on the screens that other players can see, HUD radars are allowed only if they are oriented using ASE.
 3.6. Do not shoot/track/aim in advance at opponents if they: have turned over and are trying to turn over their vehicle, have just started attacking/spawning a vehicle, have created a plane and have not yet taken off.
-3.7. Do not install your cannon in an enemy tank to bypass armor, after which the tank has no collision, thus you can bypass the reservation.
+3.7. Don't clip your guns inside of other vehicles to bypass their armor.
 
 ---------------------[Administration Rules]-------------------------
 ALL types of punishment here are imposed by the administration, which can be both jail, and removal from the role and permanent ban
@@ -315,13 +317,14 @@ Aircraft - maximum 20 tons. No armor zone can exceed 30 mm of total effective ar
 Mechs - maximum 20 tons. Jump is limited to half the height of the mech.
 Hovertanks - maximum 30 tons. Maximum speed 50 km/h. Must be with an ACF engine. Cannot fly higher than 2 meters.
 
-⨭The weight of the tank is limited by its height, the height of the tank is measured from the bottom of the tank to the roof of the turret (excluding decorative elements and remote-controlled turrets).
-Height 84+ - No limit
-Height 72+ - 55 T
-Height 60+ - 48 T
-Height 54+ - 38 T
+⨭The maximum weight of a tank depends on its height (measured from the bottom to the roof of the turret). Decorative elements and remote-controlled turrets are not taken into account. The brackets show the restrictions for unmanned turrets.
+Height 84+ - No limit (60t)
+Height 72+ - 55 T (50t)
+Height 60+ - 48 T (40t)
+Height 54+ - 38 T (30t)
 Height 48+ - 20 T
 Less than 48 - 10 t
+For intermediate values, the height-mass limit is also proportional (however, if the height does not exceed 84, the mass cannot be more than 60 t). For an exact calculation, contact the administration.
 
 ⨭⨭The use of Applyforce in vehicles is prohibited under almost all circumstances:
 ⨭This includes, but is not limited to:
@@ -336,10 +339,11 @@ Contact the administration for clarification on this point.
 ⨭A turret that does not have a hole in the turret is considered a remotely mounted turret.
 ⨭A turret that does not have a crew in the turret (does not move with the turret) is considered unmanned.
 ⨭A gun with a caliber of 75mm or more must be near the gunner (partitions are allowed) (for manned turrets) or have direct access to the bk, without partitions, with a logical projectile path (for unmanned turrets).
+⨭During movement (horizontal or vertical), the barrel must not intersect with other objects by more than 50% of its thickness. This applies to both the external parts of the hull and the internal elements of the turret.
 
-⨭The maximum traverse speed of the weapon is limited by the overall caliber, whether it is unmanned and whether it is a turret.
+⨭The maximum rotation speed of the weapon is limited by the overall caliber and whether it is a remote turret.
 ⨭Speed ​​is determined by the formula (y-speed in deg/s, x-caliber of the weapon)
-Standard turret y = 110 - 0.5x (-5 for unmanned turrets)
+Standard turret y = 110 - 0.5x
 Remote turret y = 180 - 3x (-45 for RAC (Rotary Autocannon))
 Regardless of the formula, the minimum allowed speed is 20 deg/s (unless otherwise stated, for example, if the vehicle is under an exclusion)
 
